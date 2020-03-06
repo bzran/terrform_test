@@ -1,7 +1,8 @@
-data "alicloud_market_product" "default" {
-  product_code = "cmjj018048"
-}
-
-output "first_product_package_version" {
-  value = "${data.alicloud_market_product.default}"
+resource "alicloud_image" "default" {
+  instance_id        = "i-uf6b9se8bpy28pbf4gvv"
+  image_name         = "test-image"
+  description        = "test-image"
+  tags = {
+    FinanceDept = "test_terrform"
+  }
 }
