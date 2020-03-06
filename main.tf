@@ -3,5 +3,5 @@ data "alicloud_market_product" "default" {
 }
 
 output "first_product_package_version" {
-  value = "${data.alicloud_market_product.default.product}"
+  value = "${data.alicloud_market_product.default}"
 }
